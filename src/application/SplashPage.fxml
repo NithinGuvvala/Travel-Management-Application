@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../../../../Screen%20Shot%202022-11-30%20at%203.42.10 PM.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="335.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="38.0" fitWidth="33.0" layoutX="151.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/lock.png" />
+               </image>
+            </ImageView>
+
+
+            <Button fx:id="button" layoutX="214.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToLogin" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: #ffc900;" text="Sign In / Sign Up">
+
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font></Button>
+            <Label fx:id="wrongLogIn" layoutX="153.0" layoutY="127.0" textFill="RED" />
+            <ImageView fitHeight="278.0" fitWidth="392.0" layoutX="-117.0" layoutY="77.0">
+               <image>
+                  <Image url="@../../../../../../logo.jpeg" />
+               </image>
+            </ImageView>
+
+            <Button fx:id="button1" layoutX="216.0" layoutY="98.0" mnemonicParsing="false" onAction="#goToAdminLogin" prefHeight="38.0" prefWidth="143.0" style="-fx-background-color: #ffc900;" text="Admin Sign In">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

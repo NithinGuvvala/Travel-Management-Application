@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="595.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="button11" layoutX="416.0" layoutY="108.0" mnemonicParsing="false" onAction="#searchButton" prefHeight="43.0" prefWidth="104.0" style="-fx-background-color: #ffc900;" text="Search" />
+            <TableView fx:id="upcomingTripsTable" layoutX="7.0" layoutY="209.0" prefHeight="184.0" prefWidth="589.0">
+              <columns>
+                  <TableColumn fx:id="fromCol" prefWidth="120.0" text="From Location" />
+                  <TableColumn fx:id="toCol" prefWidth="120.0" text="To Location" />
+                <TableColumn fx:id="depCol" prefWidth="120.0" text="Departure Date" />
+                  <TableColumn fx:id="arrCol" prefWidth="120.0" text="Arrival Date" />
+                  <TableColumn fx:id="statCol" prefWidth="120.0" text="Status" />
+              </columns>
+            </TableView>
+            <Text fill="#ffc900" layoutX="124.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upcoming Trips" wrappingWidth="98.82811737060547" />
+            <ComboBox fx:id="dropdown" layoutX="346.0" layoutY="61.0" onAction="#changeScreen" prefHeight="26.0" prefWidth="104.0" promptText="Account" />
+            <DatePicker fx:id="dateSelector" layoutX="301.0" layoutY="115.0" prefHeight="28.0" prefWidth="90.0" />
+            <Text fill="#ffc900" layoutX="48.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="lName" fill="#ffc900" layoutX="230.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LastName">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="fName" fill="#ffc900" layoutX="147.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FirstName">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="toCombo" layoutX="183.0" layoutY="101.0" prefHeight="26.0" prefWidth="104.0" promptText="To" />
+            <ComboBox fx:id="fromCombo" layoutX="48.0" layoutY="101.0" prefHeight="26.0" prefWidth="104.0" promptText="From" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

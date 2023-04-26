@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="6.0" prefHeight="543.0" prefWidth="228.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="24.0" layoutY="516.0" mnemonicParsing="false" onAction="#Add_trips" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #ffc900;" text="Add" />
+            <Button layoutX="24.0" layoutY="579.0" mnemonicParsing="false" onAction="#signOut" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #ffc900;" text="SignOut" />
+            <TextField fx:id="txt_id" layoutX="24.0" layoutY="21.0" prefHeight="23.0" prefWidth="180.0" promptText="Travel_ID" />
+            <TextField fx:id="carrier" layoutX="24.0" layoutY="306.0" prefHeight="30.0" prefWidth="180.0" promptText="Flight/Train/Bus Carrier" />
+            <TextField fx:id="mode_num" layoutX="24.0" layoutY="360.0" prefHeight="30.0" prefWidth="180.0" promptText="Flight/Train/Bus Number" />
+            <ComboBox fx:id="toCombo" layoutX="24.0" layoutY="111.0" prefHeight="26.0" prefWidth="180.0" promptText="To" />
+            <ComboBox fx:id="fromCombo" layoutX="24.0" layoutY="159.0" prefHeight="26.0" prefWidth="180.0" promptText="From" />
+            <ComboBox fx:id="modeCombo" layoutX="24.0" layoutY="67.0" prefHeight="26.0" prefWidth="180.0" promptText="Mode" />
+            <TextField fx:id="ticketCount" layoutX="24.0" layoutY="414.0" prefHeight="30.0" prefWidth="180.0" promptText="Ticket Count" />
+            <DatePicker fx:id="departDatePicker" layoutX="22.0" layoutY="206.0" prefHeight="26.0" prefWidth="180.0" promptText="Depart" />
+            <DatePicker fx:id="arrivDatePicker" layoutX="21.0" layoutY="259.0" prefHeight="26.0" prefWidth="180.0" promptText="Arrival" />
+            <TextField fx:id="ticketCost" layoutX="24.0" layoutY="461.0" prefHeight="30.0" prefWidth="180.0" promptText="Cost" />
+            </children>
+      </AnchorPane>
+      <TableView fx:id="table_users" layoutX="308.0" layoutY="76.0" onMouseClicked="#getSelected" prefHeight="472.0" prefWidth="566.0">
+        <columns>
+          <TableColumn fx:id="mode" prefWidth="75.0" text="Mode" />
+          <TableColumn fx:id="col_from" prefWidth="75.0" text="From" />
+            <TableColumn fx:id="col_to" prefWidth="78.0" text="To" />
+            <TableColumn fx:id="col_depart" prefWidth="84.0" text="Departure DateTime" />
+            <TableColumn fx:id="col_arrive" prefWidth="100.0" text="Arrival DateTime" />
+            <TableColumn fx:id="col_cost" text="Cost" />
+            <TableColumn fx:id="carrier_col" prefWidth="75.0" text="Carrier" />
+        </columns>
+      </TableView>
+      <TextField fx:id="filterField" layoutX="350.0" layoutY="30.0" promptText="Search" />
+   </children>
+</AnchorPane>
